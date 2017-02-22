@@ -2,7 +2,7 @@
   "name": "pi-io",
   "version": "0.0.0",
   "description": "Raspberry Pi IO Plugin for Johnny-Five",
-  "main": "pi-io.js",
+  "main": "lib/pi-io.js",
   "directories": {
     "example": "example"
   },
