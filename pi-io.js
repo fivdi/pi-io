@@ -43,10 +43,12 @@ PiIO.prototype._pinPigpioMode = function(pinData, pigpioMode) {
   }
 };
 
-PiIO.prototype._pinModeDigital = function(pinData, mode) {
-  var pigpioMode = mode === this.MODES.INPUT ? Gpio.INPUT : Gpio.OUTPUT;
+PiIO.prototype._pinModeInput = function(pinData) {
+  this._pinPigpioMode(pinData, this.MODES.INPUT);
+};
 
-  this._pinPigpioMode(pinData, pigpioMode);
+PiIO.prototype._pinModeOutput = function(pinData) {
+  this._pinPigpioMode(pinData, this.MODES.OUTPUT);
 };
 
 PiIO.prototype._pinModePwm = function(pinData) {
