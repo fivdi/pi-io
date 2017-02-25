@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.1.0 / Feb 25 2017
+===================
 
   * built-in led support
   * add support for all gpios on p1 header
