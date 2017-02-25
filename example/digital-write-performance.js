@@ -8,16 +8,17 @@ var board = new five.Board({
 });
 
 board.on('ready', function() {
-  var writesPerSecond,
+  var pin = board.io.normalize('GPIO17'),
+    writesPerSecond,
     time,
     i;
 
-  this.pinMode('GPIO17', five.Pin.OUTPUT);
+  this.pinMode(pin, five.Pin.OUTPUT);
 
   time = process.hrtime();
 
   for (i = 1; i <= 1e7; i += 1) {
-    this.digitalWrite('GPIO17', i & 1);
+    this.digitalWrite(pin, i & 1);
   }
 
   time = process.hrtime(time);
