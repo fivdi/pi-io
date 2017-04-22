@@ -48,8 +48,8 @@ Ping | no
 
 Pin ID | Supported Modes | Comments
 :--- | :--- | :---
-P1-3 or GPIO2 | INPUT, OUTPUT, PWM, SERVO | Alternatively for I2C
-P1-5 or GPIO3 | INPUT, OUTPUT, PWM, SERVO | Alternatively for I2C
+P1-3 or GPIO2 | INPUT, OUTPUT, PWM, SERVO | Alternatively I2C SDA1
+P1-5 or GPIO3 | INPUT, OUTPUT, PWM, SERVO | Alternatively I2C SCL1
 P1-7 or GPIO4 | INPUT, OUTPUT, PWM, SERVO |
 P1-8 or GPIO14 | INPUT, OUTPUT, PWM, SERVO |
 P1-10 or GPIO15 | INPUT, OUTPUT, PWM, SERVO |
