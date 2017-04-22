@@ -2,6 +2,7 @@ Unpublished
 ===========
 
   * update dependencies
+  * use pigpio mode constants when setting mode
 
 0.1.1 / Feb 26 2017
 ===================
