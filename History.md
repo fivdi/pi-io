@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.1.2 / Apr 22 2017
+===================
 
   * update dependencies
   * use pigpio mode constants when setting mode
