@@ -11,7 +11,7 @@
     "url": "https://github.com/fivdi/pi-io.git"
   },
   "dependencies": {
-    "linux-io": "^0.5.7",
+    "linux-io": "^0.6.0",
     "pigpio": "^0.5.1"
   },
   "keywords": [
