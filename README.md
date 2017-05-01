@@ -44,7 +44,7 @@ One Wire | no
 Stepper | no
 Serial/UART | no
 DAC | no
-Ping | no
+Ping | yes
 
 Pin ID | Supported Modes | Comments
 :--- | :--- | :---
