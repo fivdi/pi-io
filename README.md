@@ -1,24 +1,10 @@
 # pi-io 
 
-A proof of concept to demonstrate that it's feasible to implement a Linux IO
-Plugin for Johnny-Five using [linux-io](https://github.com/fivdi/linux-io).
-linux-io supports the following features:
+A proof of concept to demonstrate that it's feasible to implement a Raspberry
+Pi IO Plugin for Johnny-Five using
+[linux-io](https://github.com/fivdi/linux-io).
 
- * Digital IO
-   * Implementation based on the [GPIO sysfs interface](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt) using [onoff](https://github.com/fivdi/onoff)
- * I2C
-   * Implementation based on the [/dev interface](https://www.kernel.org/doc/Documentation/i2c/dev-interface) using [i2c-bus](https://github.com/fivdi/i2c-bus)
- * Built-in LEDs
-   * Implementation based on the [LED sysfs interface](https://www.kernel.org/doc/Documentation/leds/leds-class.txt) using [led.js](https://github.com/fivdi/linux-io/blob/master/lib/led.js)
-
-pi-io extends and overrides linux-io to provide the following features:
-
- * Digital IO
-   * The default implementation provided by linux-io is overridden to provide a more performant implementation based on the [pigpio C library](https://github.com/joan2937/pigpio) using the [pigpio C library wrapper](https://github.com/fivdi/pigpio)
- * PWM and Servo pulses on any number of GPIOs simultaneously
-   * Implementation based on the [pigpio C library](https://github.com/joan2937/pigpio) using the [pigpio C library wrapper](https://github.com/fivdi/pigpio)
-
-Tested on a Raspberry Pi 3 with Node.js v6.9.5.
+Tested on a Raspberry Pi 3 with Node.js v6.10.2.
 
 ## Installation
 
@@ -27,10 +13,6 @@ npm install pi-io
 ```
 
 ## Johnny-Five Features Supported
-
-The Johnny-Five features supported by a platform are summarized in tables on
-the [Platform Support](http://johnny-five.io/platform-support/) page. The
-features supported by pi-io shown in the following tables:
 
 Feature | Support
 :--- | :---
@@ -45,6 +27,8 @@ Stepper | no
 Serial/UART | no
 DAC | no
 Ping | yes
+
+## Supported Pins
 
 Pin ID | Supported Modes | Comments
 :--- | :--- | :---
@@ -78,7 +62,9 @@ LED0 | OUTPUT | Built-in LED
 
 ## Usage
 
-Pluse an LED connected to GPIO17:
+Pluse an LED connected to GPIO17.
+
+<img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/led.png">
 
 ```js
 var five = require('johnny-five');
@@ -95,7 +81,9 @@ board.on('ready', function() {
 });
 ```
 
-Rotate a continuous servo connected to GPIO27 clockwise:
+Rotate a continuous servo connected to GPIO27 clockwise.
+
+<img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/continuous-servo.png">
 
 ```js
 var five = require('johnny-five');
@@ -112,6 +100,30 @@ board.on('ready', function() {
   });
 
   servo.cw(0.8);
+});
+```
+
+Measure proximity with a HC-SR04 connected to GPIO25.
+
+<img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/hc-sr04.png">
+
+```js
+var five = require('johnny-five');
+var PiIO = require('pi-io');
+
+var board = new five.Board({
+  io: new PiIO()
+});
+
+board.on('ready', function() {
+  var proximity = new five.Proximity({
+    controller: 'HCSR04',
+    pin: 'GPIO25'
+  });
+
+  proximity.on("data", function() {
+    console.log("cm: ", this.cm);
+  });
 });
 ```
 
