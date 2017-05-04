@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.2.0 / Apr 22 2017
+===================
 
   * update dependencies
   * add support for pingRead
