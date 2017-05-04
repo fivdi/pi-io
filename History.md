@@ -3,6 +3,7 @@ Unpublished
 
   * update dependencies
   * add support for pingRead
+  * wait 100ms for the pigpio C library to stabilize
 
 0.1.2 / Apr 22 2017
 ===================
