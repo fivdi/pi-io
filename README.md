@@ -62,7 +62,7 @@ LED0 | OUTPUT | Built-in LED
 
 ## Usage
 
-Pluse an LED connected to GPIO17.
+### Pluse an LED connected to GPIO17
 
 <img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/led.png">
 
@@ -81,7 +81,7 @@ board.on('ready', function() {
 });
 ```
 
-Rotate a continuous servo connected to GPIO27 clockwise.
+### Rotate a continuous servo connected to GPIO27 clockwise
 
 <img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/continuous-servo.png">
 
@@ -103,7 +103,7 @@ board.on('ready', function() {
 });
 ```
 
-Measure proximity with a HC-SR04 connected to GPIO25.
+### Measure proximity with a HC-SR04 connected to GPIO25
 
 <img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/hc-sr04.png">
 
