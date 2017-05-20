@@ -5,12 +5,9 @@
 // with each character as quickly as it can. After the LCD is filled with the
 // character '5' the program pauses for one second and then continues.
 //
-// The test fails as garbage is displayed on the LCD. The issue is most likely
-// related to the fact that pi-io performs very fast digital output. LCD
-// operations like "write data to CG or DDRAM" take 37 microseconds to
-// complete. However, Johnny-Five doesn't wait for these operation to complete.
-// This means that if the IO plugin is fast, it will start the next opertion
-// before the previous operation has completed.
+// Initially this test failed and the following issue was created:
+// https://github.com/rwaldron/johnny-five/issues/1295
+// This issue has since been resolved.
 
 var five = require('johnny-five');
 var PiIO = require('..');
