@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * add name property
+
 0.2.0 / Apr 22 2017
 ===================
 
