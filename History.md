@@ -2,6 +2,7 @@ Unpublished
 ===========
 
   * add name property
+  * update dependencies
 
 0.2.0 / Apr 22 2017
 ===================
