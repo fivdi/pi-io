@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.2.2 / Jun 18 2017
+===================
 
   * update dependencies
 
