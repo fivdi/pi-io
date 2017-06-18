@@ -11,8 +11,8 @@
     "url": "https://github.com/fivdi/pi-io.git"
   },
   "dependencies": {
-    "linux-io": "^0.6.2",
-    "pigpio": "^0.5.1"
+    "linux-io": "^0.6.3",
+    "pigpio": "^0.6.0"
   },
   "keywords": [
     "raspberry-pi",
