@@ -1,4 +1,4 @@
-# pi-io 
+# Pi-IO
 
 A proof of concept to demonstrate that it's feasible to implement a Raspberry
 Pi IO Plugin for Johnny-Five using
