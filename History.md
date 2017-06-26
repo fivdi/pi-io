@@ -3,6 +3,7 @@
 
   * update dependencies
   * improve documentation
+  * disable pull-up and pull-down resistors when a new Gpio is created
 
 0.2.1 / May 29 2017
 ===================
