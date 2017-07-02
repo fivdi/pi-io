@@ -3,6 +3,7 @@ Unpublished
 
   * add support for enabling pull-up and pull-down resistors
   * update dependencies
+  * improved hc-sr04 timeout detection
 
 0.2.2 / Jun 18 2017
 ===================
