@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.3.0 / Jul 02 2017
+===================
 
   * add support for enabling pull-up and pull-down resistors
   * update dependencies
