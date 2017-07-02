@@ -5,6 +5,7 @@ Unpublished
   * update dependencies
   * improve hc-sr04 timeout detection
   * use lower resistor values for hc-sr04
+  * document hc-sr04 issues
 
 0.2.2 / Jun 18 2017
 ===================
