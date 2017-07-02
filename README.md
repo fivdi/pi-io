@@ -31,9 +31,9 @@ Ping | yes <sup>*)</sup>
 *) Ping was tested with three HC-SR04 proximity sensors with varying degrees
 of success. One sensor functioned as expected. The second didn't timeout as
 it should but it's was possible to workaround the issue with software. The
-third sensor didn't function. The issues may be related to the fact that one
-pin is used for both trigger and echo. All three sensors function better when
-one pin is used for trigger and another for echo.
+third sensor didn't function. The issues may be related to the fact that a
+single pin is used for both trigger and echo. All three sensors function
+better when one pin is used for trigger and another for echo.
 
 ## Supported Pins
 
