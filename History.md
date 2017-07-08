@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * add support for using hc-sr04 sensors with separate trigger and echo pins
+
 0.3.0 / Jul 02 2017
 ===================
 

@@ -32,8 +32,11 @@ Ping | yes <sup>*)</sup>
 of success. One sensor functioned as expected. The second didn't timeout as
 it should but it's was possible to workaround the issue with software. The
 third sensor didn't function. The issues may be related to the fact that a
-single pin is used for both trigger and echo. All three sensors function
-better when one pin is used for trigger and another for echo.
+single pin is used for both trigger and echo.
+
+To workaround these issues a controller was implemented that allows separate
+pins to be used for trigger and echo. The same three HC-SR04 proximity sensors
+functioned well with this controller.
 
 ## Supported Pins
 
@@ -110,7 +113,37 @@ board.on('ready', function() {
 });
 ```
 
+### Measure proximity with a HC-SR04 using separate pins for trigger and echo
+
+<img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/hc-sr04-two-pin.png">
+
+```js
+var five = require('johnny-five');
+var PiIO = require('pi-io');
+
+var board = new five.Board({
+  io: new PiIO()
+});
+
+board.on('ready', function() {
+  var proximity = new five.Proximity({
+    controller: PiIO.HCSR04, // Custom controller
+    triggerPin: 'GPIO23',
+    echoPin: 'GPIO24'
+  });
+
+  proximity.on("change", function() {
+    console.log("cm: ", this.cm);
+  });
+});
+```
+
 ### Measure proximity with a HC-SR04 connected to GPIO25
+
+Note that this circuit uses a single pin for trigger and echo. Whether or not
+this functions correctly appears to be highly dependent on the particular
+HC-SR04 sensor being used. The circuit shown above that uses separate pins for
+trigger and echo is far more reliable.
 
 <img src="https://raw.githubusercontent.com/fivdi/pi-io/master/doc/hc-sr04.png">
 
