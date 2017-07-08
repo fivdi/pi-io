@@ -9,7 +9,7 @@ var board = new five.Board({
 
 board.on('ready', function() {
   var proximity = new five.Proximity({
-    controller: PiIO.HCSR04,
+    controller: PiIO.HCSR04, // Custom controller
     triggerPin: 'GPIO23',
     echoPin: 'GPIO24'
   });
