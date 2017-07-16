@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.5.0 / Jul 16 2017
+===================
 
   * prevent a non-responding hc-sr04 from blocking other hc-sr04s
   * update dependencies
