@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * prevent a non-responding hc-sr04 from blocking other hc-sr04s
+
 0.4.0 / Jul 08 2017
 ===================
 
