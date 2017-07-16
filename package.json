@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "linux-io": "^0.8.0",
-    "pigpio": "^0.6.0"
+    "pigpio": "^0.6.1"
   },
   "keywords": [
     "raspberry-pi",
