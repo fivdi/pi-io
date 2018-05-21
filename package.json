@@ -1,6 +1,6 @@
 {
   "name": "pi-io",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Raspberry Pi IO Plugin for Johnny-Five",
   "main": "lib/pi-io.js",
   "directories": {

@@ -1,5 +1,5 @@
-Unpublished
-===========
+0.5.1 / May 21 2018
+===================
 
   * update dependencies
 
