@@ -3,18 +3,18 @@
 // In order for this test program to function correctly nothing should be
 // connected to GPIO6.
 
-var assert = require('assert');
-var five = require('johnny-five');
-var PiIO = require('..');
+const assert = require('assert');
+const five = require('johnny-five');
+const PiIO = require('..');
 
-var board = new five.Board({
+const board = new five.Board({
   io: new PiIO(),
   repl: false,
   debug: false
 });
 
 board.on('ready', function() {
-  var callbacks = 0;
+  let callbacks = 0;
 
   this.pinMode('GPIO6', this.MODES.INPUT);
 
@@ -31,7 +31,7 @@ board.on('ready', function() {
     } else  if (callbacks === 2) {
       assert(value === 0, 'expected GPIO6 to have a value of 0');
 
-      process.exit()
+      process.exit();
     }
   });
 

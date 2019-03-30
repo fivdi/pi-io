@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "lint": "jshint lib/*.js example/*.js"
+    "lint": "jshint lib/*.js example/*.js test/*.js"
   },
   "repository": {
     "type": "git",
