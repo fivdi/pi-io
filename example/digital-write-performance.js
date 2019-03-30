@@ -1,17 +1,17 @@
 'use strict';
 
-var five = require('johnny-five');
-var PiIO = require('..');
+const five = require('johnny-five');
+const PiIO = require('..');
 
-var board = new five.Board({
+const board = new five.Board({
   io: new PiIO()
 });
 
 board.on('ready', function() {
-  var pin = board.io.normalize('GPIO17'),
-    writesPerSecond,
-    time,
-    i;
+  const pin = board.io.normalize('GPIO17');
+  let writesPerSecond;
+  let time;
+  let i;
 
   this.pinMode(pin, five.Pin.OUTPUT);
 
