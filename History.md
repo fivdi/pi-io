@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * update dependencies (linux-io v1.0.3, pigpio v1.2.2)
+
 0.5.1 / May 21 2018
 ===================
 
