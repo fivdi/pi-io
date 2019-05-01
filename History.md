@@ -1,4 +1,9 @@
-1.0.0 / Apr 30 2019
+1.0.1 / May 01 2019
+===================
+
+  * allow servowrite to support degrees or microseconds
+
+1.0.0 / Mar 30 2019
 ===================
 
   * update dependencies (linux-io v1.0.3, pigpio v1.2.2)
