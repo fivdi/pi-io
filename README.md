@@ -8,6 +8,33 @@ Tested on a Raspberry Pi 3 with Node.js v6.10.2.
 
 ## Installation
 
+#### Step 1 - Install the pigpio C library
+
+The pi-io Node.js package requires the pigpio C library V41 or higher.
+
+Raspbian Jessie 2016-05-10 or newer comes with the pigpio C library
+pre-installed so it need not be manually installed.
+
+Raspbian Jessie Lite 2016-05-10 or newer does not come with the pigpio C
+library pre-installed so it must be manually installed with the following
+commands:
+
+```
+sudo apt-get update
+sudo apt-get install pigpio
+```
+
+**Warning:** The pigpio C library contains a number of utilities. One of these
+utilities is pigpiod which launches the pigpio C library as a daemon. This
+utility should not be used as the pi-io Node.js package uses the C library
+directly.
+
+Installation instructions for the pigpio C library on versions of Raspbian
+prior to 2016-05-10 can be found
+[here](http://abyz.me.uk/rpi/pigpio/download.html).
+
+#### Step 2 - Install the pi-io Node.js package
+
 ```
 npm install pi-io
 ```
