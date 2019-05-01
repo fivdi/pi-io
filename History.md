@@ -2,6 +2,7 @@
 ===================
 
   * allow servowrite to support degrees or microseconds
+  * improve installation instructions
 
 1.0.0 / Mar 30 2019
 ===================
