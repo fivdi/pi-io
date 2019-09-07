@@ -1,5 +1,5 @@
-Unpublished
-===========
+1.0.2 / Sep 07 2019
+===================
 
   * update dependencies (linux-io v1.0.4, pigpio v2.0.0)
 
