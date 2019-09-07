@@ -4,34 +4,39 @@ A proof of concept to demonstrate that it's feasible to implement a Raspberry
 Pi IO Plugin for Johnny-Five using
 [Linux-IO](https://github.com/fivdi/linux-io).
 
-Tested on a Raspberry Pi 3 with Node.js v6.10.2.
+Tested on a Raspberry Pi 4 Model B with Node.js v12.10.0.
 
 ## Installation
 
 #### Step 1 - Install the pigpio C library
 
-The pi-io Node.js package requires the pigpio C library V41 or higher.
+The [pigpio C library](https://github.com/joan2937/pigpio) is a prerequisite
+for pi-io.
 
-Raspbian Jessie 2016-05-10 or newer comes with the pigpio C library
-pre-installed so it need not be manually installed.
+Run the following command to determine which version of the pigpio C library
+is installed:
 
-Raspbian Jessie Lite 2016-05-10 or newer does not come with the pigpio C
-library pre-installed so it must be manually installed with the following
-commands:
+```
+pigpiod -v
+```
+
+For the Raspberry Pi Zero, 1, 2 and 3 V41 or higher of the pigpio C library is
+required. For the Raspberry Pi 4 V69 or higher is required.
+
+If the pigpio C library is not installed or if the installed version is too
+old, the latest version can be installed with the following commands:
 
 ```
 sudo apt-get update
 sudo apt-get install pigpio
 ```
 
+Alternative installation instructions for the pigpio C library can be found
+[here](http://abyz.me.uk/rpi/pigpio/download.html).
+
 **Warning:** The pigpio C library contains a number of utilities. One of these
 utilities is pigpiod which launches the pigpio C library as a daemon. This
-utility should not be used as the pi-io Node.js package uses the C library
-directly.
-
-Installation instructions for the pigpio C library on versions of Raspbian
-prior to 2016-05-10 can be found
-[here](http://abyz.me.uk/rpi/pigpio/download.html).
+utility should not be used as the pi-io uses the pigpio C library directly.
 
 #### Step 2 - Install the pi-io Node.js package
 
