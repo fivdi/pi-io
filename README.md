@@ -4,7 +4,7 @@ A proof of concept to demonstrate that it's feasible to implement a Raspberry
 Pi IO Plugin for Johnny-Five using
 [Linux-IO](https://github.com/fivdi/linux-io).
 
-Tested on a Raspberry Pi 4 Model B with Node.js v12.10.0.
+Tested on a Raspberry Pi 4 Model B with Node.js v14.0.0.
 
 ## Installation
 

@@ -1,5 +1,5 @@
-Unpublished
-===========
+1.1.0 / Apr 25 2020
+===================
 
   * update dependencies (linux-io v1.1.0, pigpio v3.1.1, jshint v2.11.0)
 
