@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * update dependencies (linux-io v1.1.0, pigpio v3.1.1, jshint v2.11.0)
+
 1.0.2 / Sep 07 2019
 ===================
 
